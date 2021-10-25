@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://Baizx98.github.io</id>
+    <id>https://moonlight-bai.vercel.app/</id>
     <title>今夜白</title>
-    <updated>2021-10-25T12:30:50.485Z</updated>
+    <updated>2021-10-25T12:35:31.882Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://Baizx98.github.io"/>
-    <link rel="self" href="https://Baizx98.github.io/atom.xml"/>
+    <link rel="alternate" href="https://moonlight-bai.vercel.app/"/>
+    <link rel="self" href="https://moonlight-bai.vercel.app/atom.xml"/>
     <subtitle>风摇草色 日照松光 春秋非我 晚夜何长</subtitle>
-    <logo>https://Baizx98.github.io/images/avatar.png</logo>
-    <icon>https://Baizx98.github.io/favicon.ico</icon>
+    <logo>https://moonlight-bai.vercel.app/images/avatar.png</logo>
+    <icon>https://moonlight-bai.vercel.app/favicon.ico</icon>
     <rights>All rights reserved 2021, 今夜白</rights>
     <entry>
         <title type="html"><![CDATA[测试]]></title>
-        <id>https://Baizx98.github.io/post/ce-shi/</id>
-        <link href="https://Baizx98.github.io/post/ce-shi/">
+        <id>https://moonlight-bai.vercel.app/post/ce-shi/</id>
+        <link href="https://moonlight-bai.vercel.app/post/ce-shi/">
         </link>
         <updated>2021-10-25T05:40:23.000Z</updated>
         <content type="html"><![CDATA[<p>试一下</p>
@@ -21,8 +21,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://Baizx98.github.io/post/hello-gridea/</id>
-        <link href="https://Baizx98.github.io/post/hello-gridea/">
+        <id>https://moonlight-bai.vercel.app/post/hello-gridea/</id>
+        <link href="https://moonlight-bai.vercel.app/post/hello-gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
