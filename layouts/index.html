@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ .Site.Title }}</title>
+    <meta
+      name="description"
+      content="{{ .Site.Params.intro }}"
+    />
+    <link rel="canonical" href="{{ .Site.BaseURL }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    {{ $data := dict
+      "updated_at" ""
+      "profile" (dict "keywords" (slice) "organization" "")
+      "stats" (dict "total_works" 0 "active_years" 0 "latest_year" "")
+      "works" (slice)
+    }}
+    {{ with resources.Get "orcid.json" }}
+      {{ $data = . | transform.Unmarshal }}
+    {{ end }}
+    {{ $works := $data.works | default (slice) }}
+    {{ $keywords := $data.profile.keywords | default (slice) }}
+    <div class="page-shell">
+      <main class="page">
+        <section class="hero card">
+          <div class="hero-copy">
+            <p class="eyebrow">Academic Home</p>
+            <h1>{{ .Site.Params.name }} <span>{{ .Site.Params.name_en }}</span></h1>
+            <p class="headline">{{ .Site.Params.headline }}</p>
+            <p class="subheadline">{{ .Site.Params.subheadline }}</p>
+            <p class="intro">{{ .Site.Params.intro }}</p>
+            <div class="hero-meta">
+              <span>{{ .Site.Params.location }}</span>
+              <span>{{ .Site.Params.status }}</span>
+            </div>
+            <div class="link-row">
+              {{ range .Site.Params.links }}
+                <a href="{{ .url }}" target="_blank" rel="noreferrer">{{ .emoji }} {{ .label }}</a>
+              {{ end }}
+            </div>
+          </div>
+          <div class="hero-panel">
+            <div class="profile-orb">
+              <span>🧑‍🔬</span>
+            </div>
+            <div class="stats-grid">
+              <article>
+                <strong>{{ $data.stats.total_works }}</strong>
+                <span>篇论文</span>
+              </article>
+              <article>
+                <strong>{{ $data.stats.active_years }}</strong>
+                <span>活跃年份</span>
+              </article>
+              <article>
+                <strong>{{ $data.stats.latest_year }}</strong>
+                <span>最新发表年份</span>
+              </article>
+              <article>
+                <strong>{{ len $keywords }}</strong>
+                <span>ORCID 关键词</span>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="grid-two">
+          <article class="card">
+            <div class="section-title">
+              <h2>✨ 研究画像</h2>
+              <p>一页内快速看清我在做什么。</p>
+            </div>
+            <div class="chips">
+              {{ range .Site.Params.highlights }}
+                <span>{{ .emoji }} {{ .title }} · {{ .text }}</span>
+              {{ end }}
+              {{ range $keywords }}
+                <span>🏷️ {{ . }}</span>
+              {{ end }}
+            </div>
+            <div class="details-list">
+              <div>
+                <strong>ORCID</strong>
+                <p><a href="{{ .Site.Params.orcid }}" target="_blank" rel="noreferrer">{{ .Site.Params.orcid_id }}</a></p>
+              </div>
+              <div>
+                <strong>当前单位</strong>
+                <p>{{ $data.profile.organization }}</p>
+              </div>
+              <div>
+                <strong>更新时间</strong>
+                <p>{{ $data.updated_at }}</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="section-title">
+              <h2>📊 论文趋势</h2>
+              <p>图表颜色会跟随系统深浅色模式自动切换。</p>
+            </div>
+            <div id="year-chart" class="chart"></div>
+            <div id="type-chart" class="chart chart-small"></div>
+          </article>
+        </section>
+
+        <section class="card">
+          <div class="section-title">
+            <h2>🧾 论文列表</h2>
+            <p>数据由 GitHub Actions 定期从 ORCID 同步生成。</p>
+          </div>
+          <div class="publication-list">
+            {{ range $works }}
+              <article class="publication">
+                <div class="publication-top">
+                  <div>
+                    <h3>{{ .title }}</h3>
+                    <p class="journal">{{ .journal }} · {{ .year }}{{ if .month }}-{{ .month }}{{ end }}</p>
+                  </div>
+                  <span class="pub-type">{{ .type_label }}</span>
+                </div>
+                <div class="publication-meta">
+                  {{ if .doi }}
+                    <a href="{{ .doi_url }}" target="_blank" rel="noreferrer">🔗 DOI</a>
+                  {{ end }}
+                  {{ if .url }}
+                    <a href="{{ .url }}" target="_blank" rel="noreferrer">📄 Link</a>
+                  {{ end }}
+                  <span>📥 Source: {{ .source }}</span>
+                </div>
+              </article>
+            {{ end }}
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script id="orcid-data" type="application/json">{{ $data | jsonify | safeJS }}</script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+    <script src="/scripts/site.js"></script>
+  </body>
+</html>

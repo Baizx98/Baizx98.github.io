@@ -1,0 +1,55 @@
+baseURL = "https://home.baizx.cool"
+languageCode = "zh-CN"
+title = "白卓新 | Zhuoxin Bai"
+defaultContentLanguage = "zh"
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term"]
+
+[params]
+name = "白卓新"
+name_en = "Zhuoxin Bai"
+headline = "🎓 面向图学习系统与高性能计算的研究者"
+subheadline = "🧠 聚焦 GNN、GPU 系统优化、内存层次与高效训练，让研究主页像论文摘要一样简洁清晰。"
+location = "📍 重庆大学，重庆，中国"
+email = "mailto:baizx98@gmail.com"
+github = "https://github.com/Baizx98"
+blog = "https://note.baizx.cool"
+orcid = "https://orcid.org/0009-0005-5135-5594"
+orcid_id = "0009-0005-5135-5594"
+intro = "我目前关注图神经网络训练系统、混合内存优化与多 GPU 加速。这个主页采用单页设计，把个人介绍、研究兴趣和论文列表放在同一个界面里，并通过 GitHub Actions 定期从 ORCID 自动同步论文。"
+status = "🌱 欢迎交流学术合作、系统优化和开源项目。"
+
+[[params.highlights]]
+emoji = "🔬"
+title = "Research"
+text = "图学习系统、内存系统、并行计算"
+
+[[params.highlights]]
+emoji = "⚙️"
+title = "Engineering"
+text = "Hugo、GitHub Actions、Vercel、自动化数据同步"
+
+[[params.highlights]]
+emoji = "📚"
+title = "Output"
+text = "期刊论文、持续更新的 ORCID publication feed"
+
+[[params.links]]
+emoji = "✉️"
+label = "Email"
+url = "mailto:baizx98@gmail.com"
+
+[[params.links]]
+emoji = "🧾"
+label = "ORCID"
+url = "https://orcid.org/0009-0005-5135-5594"
+
+[[params.links]]
+emoji = "💻"
+label = "GitHub"
+url = "https://github.com/Baizx98"
+
+[[params.links]]
+emoji = "📝"
+label = "Blog"
+url = "https://note.baizx.cool"

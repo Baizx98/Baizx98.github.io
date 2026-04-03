@@ -1,0 +1,38 @@
+name: Sync ORCID Publications
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 3 * * 1"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      ORCID_ID: "0009-0005-5135-5594"
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch latest ORCID data
+        run: python scripts/fetch_orcid.py --orcid-id "$ORCID_ID"
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/orcid.json
+          if git diff --cached --quiet; then
+            echo "No publication updates detected."
+            exit 0
+          fi
+          git commit -m "chore: sync ORCID publications"
+          git push
