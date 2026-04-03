@@ -30,11 +30,6 @@ emoji = "⚙️"
 title = "Engineering"
 text = "Systems、Storage、Serving"
 
-[[params.highlights]]
-emoji = "📚"
-title = "Output"
-text = "论文列表、ORCID 自动同步、可视化趋势"
-
 [[params.links]]
 emoji = "✉️"
 label = "Email"
