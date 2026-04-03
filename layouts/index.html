@@ -18,15 +18,7 @@
     <link rel="stylesheet" href="/styles/main.css" />
   </head>
   <body>
-    {{ $data := dict
-      "updated_at" ""
-      "profile" (dict "keywords" (slice) "organization" "")
-      "stats" (dict "total_works" 0 "active_years" 0 "latest_year" "")
-      "works" (slice)
-    }}
-    {{ with resources.Get "orcid.json" }}
-      {{ $data = . | transform.Unmarshal }}
-    {{ end }}
+    {{ $data := .Site.Data.orcid | default (dict "updated_at" "" "profile" (dict "keywords" (slice) "organization" "") "stats" (dict "total_works" 0 "active_years" 0 "latest_year" "") "works" (slice)) }}
     {{ $works := $data.works | default (slice) }}
     {{ $keywords := $data.profile.keywords | default (slice) }}
     <div class="page-shell">

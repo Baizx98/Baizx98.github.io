@@ -158,7 +158,7 @@ def build_stats(publications: list[dict]) -> dict:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Fetch public ORCID data for Hugo.")
     parser.add_argument("--orcid-id", required=True)
-    parser.add_argument("--output", default="assets/orcid.json")
+    parser.add_argument("--output", default="data/orcid.json")
     args = parser.parse_args()
 
     record = fetch_json(f"{API_ROOT}/{args.orcid_id}")

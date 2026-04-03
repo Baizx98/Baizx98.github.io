@@ -1,0 +1,171 @@
+{
+  "orcid_id": "0009-0005-5135-5594",
+  "updated_at": "2026-04-03 14:08 UTC",
+  "profile": {
+    "full_name": "Zhuoxin Bai",
+    "keywords": [
+      "LLM",
+      "KV Cache",
+      "GPU",
+      "GNN"
+    ],
+    "urls": [
+      {
+        "label": "Blog",
+        "url": "https://note.baizx.cool"
+      },
+      {
+        "label": "Github",
+        "url": "https://github.com/Baizx98"
+      },
+      {
+        "label": "Scholar Homepage",
+        "url": "https://home.baizx.cool"
+      }
+    ],
+    "organization": "Chongqing University · student"
+  },
+  "stats": {
+    "total_works": 8,
+    "active_years": 3,
+    "latest_year": "2026",
+    "yearly_counts": [
+      {
+        "year": "2024",
+        "count": 1
+      },
+      {
+        "year": "2025",
+        "count": 4
+      },
+      {
+        "year": "2026",
+        "count": 3
+      }
+    ],
+    "type_counts": [
+      {
+        "label": "Conference Paper",
+        "count": 4
+      },
+      {
+        "label": "Journal Article",
+        "count": 4
+      }
+    ]
+  },
+  "works": [
+    {
+      "title": "HitKV: Activation Frequency Knows Which Tokens Are Important",
+      "journal": "Proceedings of the AAAI Conference on Artificial Intelligence",
+      "type": "conference-paper",
+      "type_label": "Conference Paper",
+      "year": "2026",
+      "month": "03",
+      "day": "14",
+      "doi": "10.1609/aaai.v40i34.40105",
+      "doi_url": "https://doi.org/10.1609/aaai.v40i34.40105",
+      "url": "http://dx.doi.org/10.1609/aaai.v40i34.40105",
+      "source": "Zhuoxin Bai",
+      "put_code": 210641589
+    },
+    {
+      "title": "Latency Optimization in Hybrid Memory System for GNNs",
+      "journal": "IEEE Transactions on Computers",
+      "type": "journal-article",
+      "type_label": "Journal Article",
+      "year": "2026",
+      "month": "03",
+      "day": "",
+      "doi": "10.1109/TC.2025.3648646",
+      "doi_url": "https://doi.org/10.1109/TC.2025.3648646",
+      "url": "https://doi.org/10.1109/TC.2025.3648646",
+      "source": "Crossref",
+      "put_code": 205444749
+    },
+    {
+      "title": "Cocache: An Accurate and Low-Overhead Dynamic Caching Method for GNNs",
+      "journal": "Lecture Notes in Computer Science",
+      "type": "conference-paper",
+      "type_label": "Conference Paper",
+      "year": "2026",
+      "month": "",
+      "day": "",
+      "doi": "10.1007/978-3-031-99857-7_12",
+      "doi_url": "https://doi.org/10.1007/978-3-031-99857-7_12",
+      "url": "http://dx.doi.org/10.1007/978-3-031-99857-7_12",
+      "source": "Zhuoxin Bai",
+      "put_code": 210641641
+    },
+    {
+      "title": "DualSpar: A Dual-Granularity Memory Framework with Adaptive Sparsity for Efficient LLM Inference",
+      "journal": "2025 IEEE 43rd International Conference on Computer Design (ICCD)",
+      "type": "conference-paper",
+      "type_label": "Conference Paper",
+      "year": "2025",
+      "month": "11",
+      "day": "10",
+      "doi": "10.1109/iccd65941.2025.00044",
+      "doi_url": "https://doi.org/10.1109/iccd65941.2025.00044",
+      "url": "http://dx.doi.org/10.1109/iccd65941.2025.00044",
+      "source": "Zhuoxin Bai",
+      "put_code": 210641627
+    },
+    {
+      "title": "LAShards: Low-Overhead and Self-Adaptive MRC Construction for Non-Stack Algorithms",
+      "journal": "IEEE Transactions on Computers",
+      "type": "journal-article",
+      "type_label": "Journal Article",
+      "year": "2025",
+      "month": "10",
+      "day": "",
+      "doi": "10.1109/TC.2025.3590811",
+      "doi_url": "https://doi.org/10.1109/TC.2025.3590811",
+      "url": "https://doi.org/10.1109/TC.2025.3590811",
+      "source": "Crossref",
+      "put_code": 191938186
+    },
+    {
+      "title": "GNNBoost: Accelerating sampling-based GNN training on large scale graph by optimizing data preparation",
+      "journal": "Journal of Systems Architecture",
+      "type": "journal-article",
+      "type_label": "Journal Article",
+      "year": "2025",
+      "month": "10",
+      "day": "",
+      "doi": "10.1016/j.sysarc.2025.103456",
+      "doi_url": "https://doi.org/10.1016/j.sysarc.2025.103456",
+      "url": "https://doi.org/10.1016/j.sysarc.2025.103456",
+      "source": "Crossref",
+      "put_code": 185088504
+    },
+    {
+      "title": "RobTrack: A Robust 3D Multi-object Tracking Method for Edge Devices",
+      "journal": "Lecture Notes in Computer Science",
+      "type": "conference-paper",
+      "type_label": "Conference Paper",
+      "year": "2025",
+      "month": "",
+      "day": "",
+      "doi": "10.1007/978-981-96-9794-6_42",
+      "doi_url": "https://doi.org/10.1007/978-981-96-9794-6_42",
+      "url": "http://dx.doi.org/10.1007/978-981-96-9794-6_42",
+      "source": "Zhuoxin Bai",
+      "put_code": 210641676
+    },
+    {
+      "title": "BGS: Accelerate GNN training on multiple GPUs",
+      "journal": "Journal of Systems Architecture",
+      "type": "journal-article",
+      "type_label": "Journal Article",
+      "year": "2024",
+      "month": "08",
+      "day": "",
+      "doi": "10.1016/j.sysarc.2024.103162",
+      "doi_url": "https://doi.org/10.1016/j.sysarc.2024.103162",
+      "url": "https://doi.org/10.1016/j.sysarc.2024.103162",
+      "source": "Crossref",
+      "put_code": 158980119
+    }
+  ]
+}

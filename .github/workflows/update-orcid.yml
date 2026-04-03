@@ -1,6 +1,10 @@
 name: Sync ORCID Publications
 
 on:
+  push:
+    branches:
+      - master
+      - main
   workflow_dispatch:
   schedule:
     - cron: "17 3 * * 1"
@@ -15,10 +19,10 @@ jobs:
       ORCID_ID: "0009-0005-5135-5594"
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
@@ -29,7 +33,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/orcid.json
+          git add data/orcid.json
           if git diff --cached --quiet; then
             echo "No publication updates detected."
             exit 0
