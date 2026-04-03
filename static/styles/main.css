@@ -227,7 +227,7 @@ a {
 }
 
 .grid-two > .card,
-.card:last-child {
+.publications-card {
   padding: 28px;
   min-width: 0;
 }
@@ -281,29 +281,6 @@ a {
 .publication-list {
   display: grid;
   gap: 14px;
-}
-
-.build-card {
-  padding: 28px;
-}
-
-.build-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.build-meta span {
-  border: 1px solid var(--border);
-  background: var(--surface-strong);
-  border-radius: 16px;
-  padding: 12px 14px;
-  color: var(--muted);
-}
-
-.build-meta code {
-  color: var(--text);
-  font-family: "Geist Mono", "SFMono-Regular", Consolas, monospace;
 }
 
 .publication {

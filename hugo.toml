@@ -9,7 +9,7 @@ disableKinds = ["taxonomy", "term"]
 [params]
 name = "白卓新"
 name_en = "Zhuoxin Bai"
-headline = "🎓 面向大模型推理系统与智能体记忆的研究者"
+headline = "🎓 面向大模型推理系统优化的研究者"
 subheadline = "🧠 当前聚焦 LLM 推理加速、KV Cache 优化、Agent Memory 以及面向长上下文与高吞吐推理场景的系统设计。"
 location = "📍 重庆大学，重庆，中国"
 email = "mailto:baizx98@gmail.com"
@@ -28,7 +28,7 @@ text = "LLM Inference、KV Cache、Agent Memory"
 [[params.highlights]]
 emoji = "⚙️"
 title = "Engineering"
-text = "Systems、Compiler-Aware Optimization、Serving"
+text = "Systems、Storage、Serving"
 
 [[params.highlights]]
 emoji = "📚"
@@ -38,7 +38,7 @@ text = "论文列表、ORCID 自动同步、可视化趋势"
 [[params.links]]
 emoji = "✉️"
 label = "Email"
-url = "mailto:baizx98@gmail.com"
+url = "mailto:baizx98@foxmail.com"
 
 [[params.links]]
 emoji = "🧾"

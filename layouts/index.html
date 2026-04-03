@@ -117,7 +117,7 @@
           </article>
         </section>
 
-        <section class="card">
+        <section class="card publications-card">
           <div class="section-title">
             <h2>🧾 论文列表</h2>
             <p>数据由 GitHub Actions 定期从 ORCID 同步生成。</p>
@@ -146,17 +146,6 @@
           </div>
         </section>
 
-        <section class="card build-card">
-          <div class="section-title">
-            <h2>🛰️ 构建指纹</h2>
-            <p>用来核对本地、GitHub Pages 和 Vercel 是否展示的是同一版页面。</p>
-          </div>
-          <div class="build-meta">
-            <span>Commit: <code>{{ $gitHash }}</code></span>
-            <span>Build Time: <code>{{ $buildTime }}</code></span>
-            <span>ORCID Sync: <code>{{ $data.updated_at }}</code></span>
-          </div>
-        </section>
       </main>
     </div>
 
