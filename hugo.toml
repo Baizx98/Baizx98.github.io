@@ -3,6 +3,7 @@ languageCode = "zh-CN"
 title = "白卓新 | Zhuoxin Bai | 今夜白"
 defaultContentLanguage = "zh"
 enableRobotsTXT = true
+enableGitInfo = true
 disableKinds = ["taxonomy", "term"]
 
 [params]

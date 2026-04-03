@@ -23,6 +23,11 @@
     {{ $keywords := $data.profile.keywords | default (slice) }}
     {{ $displayName := .Site.Params.name | default "白卓新" }}
     {{ $displayNameEn := .Site.Params.name_en | default $data.profile.full_name | default "Zhuoxin Bai" }}
+    {{ $buildTime := now.Format "2006-01-02 15:04 MST" }}
+    {{ $gitHash := "no-git-info" }}
+    {{ with .GitInfo }}
+      {{ $gitHash = .AbbreviatedHash }}
+    {{ end }}
     <div class="page-shell">
       <main class="page">
         <section class="hero card">
@@ -137,6 +142,18 @@
                 </div>
               </article>
             {{ end }}
+          </div>
+        </section>
+
+        <section class="card build-card">
+          <div class="section-title">
+            <h2>🛰️ 构建指纹</h2>
+            <p>用来核对本地、GitHub Pages 和 Vercel 是否展示的是同一版页面。</p>
+          </div>
+          <div class="build-meta">
+            <span>Commit: <code>{{ $gitHash }}</code></span>
+            <span>Build Time: <code>{{ $buildTime }}</code></span>
+            <span>ORCID Sync: <code>{{ $data.updated_at }}</code></span>
           </div>
         </section>
       </main>
