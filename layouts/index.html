@@ -21,12 +21,14 @@
     {{ $data := .Site.Data.orcid | default (dict "updated_at" "" "profile" (dict "keywords" (slice) "organization" "") "stats" (dict "total_works" 0 "active_years" 0 "latest_year" "") "works" (slice)) }}
     {{ $works := $data.works | default (slice) }}
     {{ $keywords := $data.profile.keywords | default (slice) }}
+    {{ $displayName := .Site.Params.name | default "白卓新" }}
+    {{ $displayNameEn := .Site.Params.name_en | default $data.profile.full_name | default "Zhuoxin Bai" }}
     <div class="page-shell">
       <main class="page">
         <section class="hero card">
           <div class="hero-copy">
             <p class="eyebrow">Academic Home</p>
-            <h1>{{ .Site.Params.name }} <span>{{ .Site.Params.name_en }}</span></h1>
+            <h1>{{ $displayName }} <span>{{ $displayNameEn }}</span></h1>
             <p class="headline">{{ .Site.Params.headline }}</p>
             <p class="subheadline">{{ .Site.Params.subheadline }}</p>
             <p class="intro">{{ .Site.Params.intro }}</p>
@@ -81,15 +83,19 @@
             </div>
             <div class="details-list">
               <div>
-                <strong>ORCID</strong>
-                <p><a href="{{ .Site.Params.orcid }}" target="_blank" rel="noreferrer">{{ .Site.Params.orcid_id }}</a></p>
+                <strong>当前关注</strong>
+                <p>LLM 推理加速、KV Cache 优化、Agent Memory</p>
               </div>
               <div>
                 <strong>当前单位</strong>
                 <p>{{ $data.profile.organization }}</p>
               </div>
               <div>
-                <strong>更新时间</strong>
+                <strong>论文数据来源</strong>
+                <p><a href="{{ .Site.Params.orcid }}" target="_blank" rel="noreferrer">ORCID 公开记录</a> · GitHub Actions 定期同步</p>
+              </div>
+              <div>
+                <strong>最近同步时间</strong>
                 <p>{{ $data.updated_at }}</p>
               </div>
             </div>

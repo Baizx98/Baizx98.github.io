@@ -8,31 +8,31 @@ disableKinds = ["taxonomy", "term"]
 [params]
 name = "白卓新"
 name_en = "Zhuoxin Bai"
-headline = "🎓 面向图学习系统与高性能计算的研究者"
-subheadline = "🧠 聚焦 GNN、GPU 系统优化、内存层次与高效训练，让研究主页像论文摘要一样简洁清晰。"
+headline = "🎓 面向大模型推理系统与智能体记忆的研究者"
+subheadline = "🧠 当前聚焦 LLM 推理加速、KV Cache 优化、Agent Memory 以及面向长上下文与高吞吐推理场景的系统设计。"
 location = "📍 重庆大学，重庆，中国"
 email = "mailto:baizx98@gmail.com"
 github = "https://github.com/Baizx98"
 blog = "https://note.baizx.cool"
 orcid = "https://orcid.org/0009-0005-5135-5594"
 orcid_id = "0009-0005-5135-5594"
-intro = "我目前关注图神经网络训练系统、混合内存优化与多 GPU 加速。这个主页采用单页设计，把个人介绍、研究兴趣和论文列表放在同一个界面里，并通过 GitHub Actions 定期从 ORCID 自动同步论文。"
-status = "🌱 欢迎交流学术合作、系统优化和开源项目。"
+intro = "我目前主要关注大语言模型推理系统，包括推理加速、KV Cache 管理、长上下文场景下的内存优化，以及 Agent Memory 相关机制设计。这个主页采用单页结构，将个人介绍、研究兴趣、动态图表和论文列表整合在同一界面中，并通过 GitHub Actions 定期从 ORCID 自动同步论文数据。"
+status = "🌱 欢迎交流 LLM Systems、推理优化、智能体记忆与开源实现。"
 
 [[params.highlights]]
 emoji = "🔬"
 title = "Research"
-text = "图学习系统、内存系统、并行计算"
+text = "LLM Inference、KV Cache、Agent Memory"
 
 [[params.highlights]]
 emoji = "⚙️"
 title = "Engineering"
-text = "Hugo、GitHub Actions、Vercel、自动化数据同步"
+text = "Systems、Compiler-Aware Optimization、Serving"
 
 [[params.highlights]]
 emoji = "📚"
 title = "Output"
-text = "期刊论文、持续更新的 ORCID publication feed"
+text = "论文列表、ORCID 自动同步、可视化趋势"
 
 [[params.links]]
 emoji = "✉️"
