@@ -81,6 +81,12 @@ a {
   padding: 34px;
 }
 
+.hero-copy {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+}
+
 .eyebrow {
   margin: 0 0 10px;
   font-size: 0.84rem;
@@ -110,7 +116,7 @@ a {
 .headline {
   font-size: 1.18rem;
   font-weight: 700;
-  margin: 22px 0 10px;
+  margin: 0;
 }
 
 .subheadline,
@@ -126,6 +132,7 @@ a {
 .intro {
   max-width: 62ch;
   line-height: 1.75;
+  margin: 0;
 }
 
 .hero-meta,
@@ -138,7 +145,7 @@ a {
 }
 
 .hero-meta {
-  margin: 22px 0 18px;
+  margin: 8px 0 6px;
 }
 
 .hero-meta span,
@@ -245,7 +252,7 @@ a {
 .details-list {
   display: grid;
   gap: 12px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
 }
 
 .details-list div {
@@ -351,10 +358,6 @@ a {
 
   .stats-grid {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .details-list {
-    grid-template-columns: 1fr;
   }
 
   .publication-top {
